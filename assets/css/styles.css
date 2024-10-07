@@ -1,0 +1,115 @@
+/*  Formatos */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Major Mono Display;
+}
+
+body{
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "aside menu menu menu"
+        "aside menu menu menu"
+        "aside menu menu menu"
+        "footer footer footer footer" ;
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr 1fr 1fr auto;
+        height: 100vh;
+}
+
+/* Header */
+header{
+    grid-area: header;
+    background-color: #f1b2e7;   
+}
+
+header h1 {
+    text-align: center;
+    padding: 32px 0px 32px 0px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+}
+
+nav{
+    background-color: #f7e3f0; ;
+    padding: 15px 0px 15px 15px;
+}
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+/* Aside */
+aside{
+    grid-area: aside;
+    padding: 16px 32px;
+}
+
+.menu-cat{
+    background-color: #fdfafd;
+}
+
+
+.menu-cat h1{
+    font-size: 20px;
+    padding-bottom: 32px;
+}
+.menu-cat ul li{
+    font-size: 100%;
+}
+
+aside ul{
+    list-style: none;
+}
+
+aside ul li{
+    padding: 6px 0px;
+}
+/* Menu */
+
+.mostrador{
+    padding: 16px 8px;
+    grid-area: menu;
+    display:grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    overflow: scroll;
+        
+}
+
+.mostrador img{
+    width: 100%; 
+    height: auto; 
+    max-height: 100%;
+    padding-bottom: 12px;
+}
+
+.productos-card{
+    width: 200px; 
+    height: 150px; 
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(225, 213, 228);
+    border-radius: 10%;
+    text-align: center;
+    max-height: 250px;
+    min-height: 250px;
+}
+
+footer{
+    background-color: #f1b2e7;
+    grid-area: footer;
+    text-align: center;
+    border: 1px solid #f1b2e7;
+    padding: 32px 32px;
+}
